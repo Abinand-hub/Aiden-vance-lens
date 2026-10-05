@@ -1,0 +1,1235 @@
+/* ==========================================================================
+   AIDEN VANCE VISUAL — EXACT MODEL REPLICA DESIGN SYSTEM
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Caveat:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Italiana&display=swap');
+
+:root {
+  --bg-main: #EFE7DB;
+  --bg-page: #F4EDE2;
+  --bg-card: #FAF6EF;
+  --bg-note: #DCD0BE;
+  --bg-note-alt: #E8DECF;
+  
+  --text-dark: #1E1A17;
+  --text-body: #4A443E;
+  --text-muted: #7E756B;
+  
+  --gold-primary: #B6864C;
+  --gold-light: #D4A86A;
+  --gold-dark: #91612C;
+  
+  --caramel-btn: #A5723C;
+  --caramel-hover: #8D5D2A;
+  
+  --tape-color: #E7DDCE;
+  --tape-border: rgba(210, 196, 178, 0.6);
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-editorial: 'Cormorant Garamond', Garamond, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-handwriting: 'Caveat', cursive;
+
+  --shadow-polaroid: 0 12px 30px rgba(45, 35, 25, 0.12), 0 3px 10px rgba(45, 35, 25, 0.06);
+  --shadow-hover: 0 20px 45px rgba(35, 25, 15, 0.2), 0 6px 16px rgba(35, 25, 15, 0.1);
+  --shadow-camera: 0 25px 60px rgba(35, 25, 15, 0.35);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  background-color: var(--bg-main);
+  color: var(--text-dark);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: #EFE7DB;
+  color: var(--text-dark);
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle Film Grain */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Page Frame Container matching the exact screenshot ratio and margins */
+.site-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #F5EFE6;
+  position: relative;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   TOP BAR / HEADER
+   ========================================================================== */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 50px 0;
+  position: relative;
+  z-index: 20;
+}
+
+.brand-header-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.brand-logo-icon {
+  width: 28px;
+  height: 28px;
+  color: var(--gold-dark);
+}
+
+.brand-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-main-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #2D2723;
+  line-height: 1;
+}
+
+.brand-sub-name {
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  color: var(--gold-dark);
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.nav-hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+
+.nav-hamburger-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #2D2723;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nav-hamburger-btn:hover span {
+  background: var(--gold-dark);
+}
+
+/* Mobile overlay menu */
+.nav-fullscreen-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(24, 20, 17, 0.95);
+  backdrop-filter: blur(12px);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.nav-fullscreen-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-fullscreen-overlay a {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: #F5EFE6;
+  text-decoration: none;
+  margin: 14px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-fullscreen-overlay a:hover {
+  color: var(--gold-light);
+}
+
+.overlay-close-btn {
+  position: absolute;
+  top: 36px;
+  right: 48px;
+  background: none;
+  border: none;
+  color: #FFF;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   1. HERO SECTION (EXACT MATCH TO REFERENCE)
+   ========================================================================== */
+.hero-exact-section {
+  position: relative;
+  padding: 40px 50px 100px;
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: 1.05fr 1.35fr;
+  align-items: center;
+  background: radial-gradient(circle at 65% 40%, #FFFDF8 0%, #F5EFE6 60%);
+}
+
+@media (max-width: 992px) {
+  .hero-exact-section {
+    grid-template-columns: 1fr;
+    padding: 30px 24px 80px;
+    gap: 40px;
+  }
+}
+
+.hero-left-col {
+  position: relative;
+  z-index: 5;
+  max-width: 480px;
+}
+
+.hero-exact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.8rem, 4.4vw, 4.2rem);
+  line-height: 1.08;
+  font-weight: 700;
+  color: #2D2723;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.hero-exact-title .gold-italic-text {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  font-weight: 500;
+  color: #A5723C;
+  letter-spacing: 0.02em;
+}
+
+.btn-book-lens {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #A5723C;
+  color: #FFF;
+  text-decoration: none;
+  padding: 13px 34px;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 22px rgba(165, 114, 60, 0.28);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-book-lens:hover {
+  background: #8F5E2B;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(165, 114, 60, 0.4);
+}
+
+/* Hero Right Composition */
+.hero-right-stage {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .hero-right-stage {
+    height: 420px;
+  }
+}
+
+/* Centerpiece Camera with Silk & Baby's Breath */
+.hero-camera-centerpiece {
+  position: absolute;
+  top: 48%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: var(--shadow-camera);
+  z-index: 4;
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  transition: transform 0.4s ease;
+}
+
+.hero-camera-centerpiece img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-camera-centerpiece:hover {
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+/* Curling 35mm Film Strip */
+.hero-film-strip {
+  position: absolute;
+  top: 4%;
+  left: 26%;
+  width: 95px;
+  height: 360px;
+  background: #141210;
+  border-radius: 6px;
+  transform: rotate(-12deg) translateY(-20px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 6px;
+  gap: 8px;
+  z-index: 3;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.hero-film-strip::before,
+.hero-film-strip::after {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 5px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 6px,
+    #FFFFFF 6px,
+    #FFFFFF 12px
+  );
+  opacity: 0.35;
+}
+.hero-film-strip::before { left: 2px; }
+.hero-film-strip::after { right: 2px; }
+
+.film-frame-box {
+  width: 100%;
+  height: 68px;
+  border-radius: 4px;
+  overflow: hidden;
+  background: #25201C;
+}
+
+.film-frame-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Polaroids in Hero */
+.polaroid-frame {
+  position: absolute;
+  background: #FFFFFF;
+  padding: 8px 8px 18px;
+  border-radius: 3px;
+  box-shadow: var(--shadow-polaroid);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.polaroid-frame:hover {
+  transform: translateY(-6px) scale(1.05) rotate(0deg) !important;
+  box-shadow: var(--shadow-hover);
+  z-index: 15 !important;
+}
+
+.polaroid-thumb-wrap {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #ECE5DC;
+}
+
+.polaroid-thumb-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.polaroid-frame:hover .polaroid-thumb-wrap img {
+  transform: scale(1.05);
+}
+
+.polaroid-label-bottom {
+  margin-top: 6px;
+  text-align: center;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #2D2723;
+  text-transform: uppercase;
+}
+
+.polaroid-sub-date {
+  display: block;
+  font-size: 0.48rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-dark);
+  font-weight: 500;
+}
+
+/* Positions for Hero Polaroids */
+.polaroid-hero-1 {
+  top: -10px;
+  right: 25px;
+  width: 155px;
+  transform: rotate(8deg);
+  z-index: 5;
+}
+.polaroid-hero-1 .polaroid-thumb-wrap { height: 135px; }
+
+.polaroid-hero-2 {
+  top: 130px;
+  right: 0px;
+  width: 165px;
+  transform: rotate(4deg);
+  z-index: 6;
+}
+.polaroid-hero-2 .polaroid-thumb-wrap { height: 150px; }
+
+.polaroid-hero-3 {
+  bottom: 0px;
+  right: 35px;
+  width: 175px;
+  transform: rotate(-6deg);
+  z-index: 7;
+}
+.polaroid-hero-3 .polaroid-thumb-wrap { height: 155px; }
+
+/* Tape sticker effect */
+.washi-tape-strip {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(1.5deg);
+  width: 50px;
+  height: 16px;
+  background: rgba(235, 225, 210, 0.85);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  border-left: 1.5px dashed rgba(255,255,255,0.4);
+  border-right: 1.5px dashed rgba(255,255,255,0.4);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   2. SECTION: ABOUT US / EDITORIAL STATEMENT
+   ========================================================================== */
+.about-statement-wrap {
+  position: relative;
+  padding: 100px 50px 120px;
+  text-align: center;
+  background: #F5EFE6;
+}
+
+@media (max-width: 768px) {
+  .about-statement-wrap {
+    padding: 70px 20px 90px;
+  }
+}
+
+.diamond-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #A5723C;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.statement-headline-text {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4.3vw, 4rem);
+  font-weight: 700;
+  line-height: 1.32;
+  color: #2D2723;
+  max-width: 1080px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 5;
+  letter-spacing: -0.01em;
+}
+
+/* Inline Media Capsules */
+.inline-thumb-pill {
+  display: inline-block;
+  vertical-align: middle;
+  width: 54px;
+  height: 42px;
+  border: 2.5px solid #FFF;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  margin: 0 8px;
+  transform: rotate(-4deg);
+  transition: transform 0.3s ease;
+}
+
+.inline-thumb-pill:hover {
+  transform: rotate(0deg) scale(1.18);
+}
+
+.inline-thumb-pill img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inline-video-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 64px;
+  height: 44px;
+  border-radius: 22px;
+  background: #141210;
+  border: 2px solid #FFF;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  cursor: pointer;
+  margin: 0 8px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.inline-video-pill-btn:hover {
+  transform: scale(1.12);
+}
+
+.inline-video-pill-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+}
+
+.inline-play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFF;
+  font-size: 13px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Scattered polaroids around About statement (exact positions from screenshot) */
+.about-polaroid-topleft {
+  top: 40px;
+  left: 50px;
+  width: 140px;
+  transform: rotate(-10deg);
+  z-index: 3;
+}
+.about-polaroid-topleft .polaroid-thumb-wrap { height: 130px; }
+
+.about-polaroid-bottomright {
+  bottom: 20px;
+  right: 60px;
+  width: 155px;
+  transform: rotate(8deg);
+  z-index: 3;
+}
+.about-polaroid-bottomright .polaroid-thumb-wrap { height: 145px; }
+
+@media (max-width: 992px) {
+  .about-polaroid-topleft,
+  .about-polaroid-bottomright {
+    display: none;
+  }
+}
+
+/* ==========================================================================
+   3. SECTION: OUR SERVICES / YOUR STORY, BEAUTIFULLY TOLD
+   ========================================================================== */
+.services-exact-section {
+  position: relative;
+  padding: 80px 50px 120px;
+  background: #F5EFE6;
+}
+
+@media (max-width: 768px) {
+  .services-exact-section {
+    padding: 60px 20px 80px;
+  }
+}
+
+.services-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .services-top-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.services-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #2D2723;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .services-main-title {
+    text-align: left;
+  }
+}
+
+/* Services Grid with Arched Photographer + Numbered Polaroid Cards */
+.services-cards-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: flex-end;
+}
+
+@media (max-width: 992px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 580px) {
+  .services-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Photographer Arched Frame */
+.photographer-arch-box {
+  position: relative;
+  background: #E5DAC8;
+  border-radius: 120px 120px 16px 16px;
+  height: 360px;
+  overflow: hidden;
+  box-shadow: var(--shadow-polaroid);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.photographer-arch-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.5s ease;
+}
+
+.photographer-arch-box:hover img {
+  transform: scale(1.04);
+}
+
+.star-accent-gold {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  color: #A5723C;
+  font-size: 1.4rem;
+  z-index: 5;
+}
+
+/* Numbered Polaroid Service Cards */
+.service-polaroid-item {
+  position: relative;
+}
+
+.service-step-num {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #B5ACA0;
+  line-height: 1;
+  margin-bottom: 6px;
+  margin-left: 8px;
+}
+
+.service-polaroid-card {
+  background: #FFFFFF;
+  padding: 10px 10px 22px;
+  border-radius: 4px;
+  box-shadow: var(--shadow-polaroid);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.service-polaroid-card:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: var(--shadow-hover);
+}
+
+.service-polaroid-img {
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #ECE5DC;
+}
+
+.service-polaroid-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.service-polaroid-card:hover .service-polaroid-img img {
+  transform: scale(1.06);
+}
+
+.service-card-title {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #2D2723;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* Angles matching screenshot */
+.service-card-angle-2 {
+  transform: rotate(5deg);
+}
+
+.service-card-angle-3 {
+  transform: rotate(-3deg);
+}
+
+/* ==========================================================================
+   4. SECTION: CAPTURED WITH LOVE / GALLERY
+   ========================================================================== */
+.gallery-exact-section {
+  position: relative;
+  padding: 80px 50px 120px;
+  background: #F5EFE6;
+}
+
+@media (max-width: 768px) {
+  .gallery-exact-section {
+    padding: 60px 20px 80px;
+  }
+}
+
+.gallery-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.gallery-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #2D2723;
+  text-transform: uppercase;
+}
+
+/* Scattered Gallery Cluster (Matching Exact Positions in Screenshot) */
+.gallery-cluster-stage {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 800px) {
+  .gallery-cluster-stage {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Center Main Stage Polaroid */
+.gallery-center-main-polaroid {
+  position: relative;
+  width: 280px;
+  background: #FFFFFF;
+  padding: 12px 12px 28px;
+  border-radius: 4px;
+  box-shadow: 0 20px 50px rgba(45, 35, 25, 0.22);
+  z-index: 10;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gallery-center-main-polaroid:hover {
+  transform: scale(1.04);
+}
+
+.gallery-center-main-polaroid .polaroid-thumb-wrap {
+  height: 280px;
+}
+
+.taped-tag-label {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  background: #F0E8DC;
+  border: 1px dashed rgba(165, 114, 60, 0.5);
+  padding: 4px 14px;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: #2D2723;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Side Scattered Polaroids */
+.gallery-polaroid-side {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-polaroid-side:hover {
+  transform: translateY(-6px) scale(1.06) rotate(0deg) !important;
+  box-shadow: var(--shadow-hover);
+  z-index: 20 !important;
+}
+
+/* Left Rings */
+.gal-pos-rings {
+  top: 100px;
+  left: 10%;
+  width: 175px;
+  transform: rotate(-8deg);
+  z-index: 5;
+}
+.gal-pos-rings .polaroid-thumb-wrap { height: 155px; }
+
+/* Left Bottom Couple */
+.gal-pos-couple-left {
+  bottom: 20px;
+  left: 15%;
+  width: 150px;
+  transform: rotate(6deg);
+  z-index: 6;
+}
+.gal-pos-couple-left .polaroid-thumb-wrap { height: 140px; }
+
+/* Far Left Peek */
+.gal-pos-far-left {
+  top: 30px;
+  left: 0;
+  width: 120px;
+  transform: rotate(12deg);
+  z-index: 2;
+}
+.gal-pos-far-left .polaroid-thumb-wrap { height: 110px; }
+
+/* Right Arch Ceremony */
+.gal-pos-arch {
+  top: 90px;
+  right: 24%;
+  width: 150px;
+  transform: rotate(4deg);
+  z-index: 4;
+}
+.gal-pos-arch .polaroid-thumb-wrap { height: 140px; }
+
+/* Right Couple Portrait */
+.gal-pos-portrait {
+  top: 105px;
+  right: 12%;
+  width: 130px;
+  transform: rotate(-6deg);
+  z-index: 5;
+}
+.gal-pos-portrait .polaroid-thumb-wrap { height: 120px; }
+
+/* Right Bottom Forehead Touch */
+.gal-pos-touch {
+  bottom: 20px;
+  right: 14%;
+  width: 185px;
+  transform: rotate(-5deg);
+  z-index: 7;
+}
+.gal-pos-touch .polaroid-thumb-wrap { height: 165px; }
+
+@media (max-width: 800px) {
+  .gallery-polaroid-side {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100% !important;
+  }
+  .gallery-center-main-polaroid {
+    width: 100% !important;
+  }
+}
+
+/* ==========================================================================
+   5. SECTION: LOVE NOTES / TESTIMONIALS (EXACT MATCH)
+   ========================================================================== */
+.testimonials-exact-section {
+  position: relative;
+  padding: 80px 50px 140px;
+  background: #F5EFE6;
+}
+
+@media (max-width: 768px) {
+  .testimonials-exact-section {
+    padding: 60px 20px 100px;
+  }
+}
+
+.testimonials-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 60px;
+}
+
+.testimonials-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.4vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #2D2723;
+  text-transform: uppercase;
+}
+
+/* Notes Scrapbook Grid */
+.testimonials-scrapbook-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 850px) {
+  .testimonials-scrapbook-grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+}
+
+/* Left Note Card with Perforated Holes */
+.perforated-note-card {
+  position: relative;
+  background: #D8CCBA;
+  padding: 45px 36px 40px;
+  border-radius: 4px;
+  box-shadow: 0 12px 32px rgba(45, 35, 25, 0.14);
+  transform: rotate(-3deg);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.perforated-note-card::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #F5EFE6 0px,
+    #F5EFE6 8px,
+    transparent 8px,
+    transparent 20px
+  );
+}
+
+.note-serif-quote {
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+  line-height: 1.55;
+  color: #2D2723;
+  font-style: normal;
+}
+
+.note-pinned-polaroid {
+  position: absolute;
+  bottom: -40px;
+  right: -20px;
+  width: 140px;
+  transform: rotate(8deg);
+  z-index: 5;
+}
+.note-pinned-polaroid .polaroid-thumb-wrap { height: 130px; }
+
+/* Right Note & Polaroid */
+.right-note-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.taped-minimal-note {
+  position: relative;
+  background: #E9DFCE;
+  padding: 30px 28px;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(45, 35, 25, 0.1);
+  max-width: 320px;
+  margin-bottom: 20px;
+  transform: rotate(2deg);
+}
+
+.taped-minimal-note::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 14px;
+  right: 14px;
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #F5EFE6 0px,
+    #F5EFE6 6px,
+    transparent 6px,
+    transparent 16px
+  );
+}
+
+.minimal-note-text {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #2D2723;
+}
+
+.right-side-polaroid {
+  position: relative;
+  width: 220px;
+  transform: rotate(-7deg);
+  margin-right: 20px;
+}
+.right-side-polaroid .polaroid-thumb-wrap { height: 195px; }
+
+/* Curved Hand-Drawn Navigation Arrows */
+.scrapbook-nav-arrows {
+  position: absolute;
+  bottom: -60px;
+  left: 55%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.curved-arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #A5723C;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+}
+
+.curved-arrow-btn:hover {
+  color: #2D2723;
+  transform: scale(1.25);
+}
+
+/* ==========================================================================
+   6. FOOTER (EXACT MATCH TO REFERENCE)
+   ========================================================================== */
+.footer-exact-section {
+  position: relative;
+  padding: 60px 50px 30px;
+  background: #E5DAC8;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .footer-exact-section {
+    padding: 40px 20px 20px;
+  }
+}
+
+.footer-top-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.footer-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+}
+
+.footer-nav-list a {
+  font-size: 0.88rem;
+  color: #4A443E;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-list a:hover {
+  color: #2D2723;
+}
+
+.footer-mid-split {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 768px) {
+  .footer-mid-split {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.footer-cta-text {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  line-height: 1.3;
+  color: #4A443E;
+  margin-bottom: 18px;
+}
+
+.footer-social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 68, 62, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4A443E;
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-social-btn:hover {
+  background: #2D2723;
+  color: #FFF;
+  border-color: #2D2723;
+}
+
+/* Three Overlapping Polaroids in Footer */
+.footer-polaroids-stack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.footer-pol-1 {
+  width: 125px;
+  transform: rotate(-6deg);
+}
+.footer-pol-1 .polaroid-thumb-wrap { height: 110px; }
+
+.footer-pol-2 {
+  width: 135px;
+  transform: rotate(4deg);
+}
+.footer-pol-2 .polaroid-thumb-wrap { height: 120px; }
+
+.footer-pol-3 {
+  width: 125px;
+  transform: rotate(-4deg);
+}
+.footer-pol-3 .polaroid-thumb-wrap { height: 110px; }
+
+/* Giant Bottom Watermark Typography */
+.footer-giant-watermark {
+  font-family: var(--font-serif);
+  font-size: clamp(3.8rem, 13.5vw, 13rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #B6864C;
+  text-align: center;
+  line-height: 0.85;
+  margin-top: 30px;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.85;
+}

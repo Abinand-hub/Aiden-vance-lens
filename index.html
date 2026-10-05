@@ -1,0 +1,2112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0" name="viewport"/>
+  <title>AIDEN VANCE VISUAL — Luxury Wedding & Editorial Photography</title>
+  
+  <!-- Google Fonts: Playfair Display, Cormorant Garamond, Montserrat, Pinyon Script -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FAF8F5',
+              100: '#F6EFE6',
+              200: '#EDE4D6',
+              300: '#E2D5C3',
+              400: '#D4C4AE'
+            },
+            gold: {
+              400: '#D4A86A',
+              500: '#B6864C',
+              600: '#9B6E36',
+              700: '#7E5624'
+            },
+            caramel: {
+              500: '#A4723B',
+              600: '#8C5D2A'
+            },
+            charcoal: {
+              800: '#2A2521',
+              900: '#1A1614'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            editorial: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            script: ['"Pinyon Script"', 'cursive']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: #FAF8F5;
+      color: #2D2520;
+      font-family: 'Montserrat', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    body {
+      background-color: #FAF8F5;
+      background-image: 
+        radial-gradient(at 10% 12%, rgba(255, 255, 255, 0.95) 0%, transparent 45%),
+        radial-gradient(at 90% 10%, rgba(235, 222, 204, 0.4) 0%, transparent 50%),
+        radial-gradient(at 20% 50%, rgba(246, 239, 230, 0.5) 0%, transparent 55%),
+        radial-gradient(at 85% 75%, rgba(235, 222, 204, 0.35) 0%, transparent 50%),
+        radial-gradient(at 15% 90%, rgba(255, 253, 248, 0.8) 0%, transparent 45%);
+      overflow-x: hidden;
+      width: 100%;
+      position: relative;
+    }
+
+    /* ==========================================================================
+       HERO SECTION — ULTRA LUXURY EDITORIAL COMPOSITION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      width: 100%;
+      min-height: 94vh;
+      background: radial-gradient(circle at 85% 15%, #FFFDF8 0%, rgba(247, 241, 231, 0.9) 45%, #EDE3D4 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(182, 134, 76, 0.12);
+    }
+
+    /* Ambient Subtle Glows & Luxury Motifs */
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: -10%;
+      right: -5%;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(212, 168, 106, 0.14) 0%, rgba(246, 239, 230, 0) 70%);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-section::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(to bottom, rgba(246, 239, 230, 0) 0%, #FAF8F5 100%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    /* Luxury Watermark Stamp in Section Backgrounds */
+    .bg-watermark-text {
+      position: absolute;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 800;
+      color: rgba(182, 134, 76, 0.03);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      pointer-events: none;
+      user-select: none;
+      z-index: 0;
+    }
+
+    /* Section Decorative Divider */
+    .section-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 0 auto;
+      color: #A4723B;
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      opacity: 0.85;
+    }
+    .section-ornament::before,
+    .section-ornament::after {
+      content: "";
+      height: 1px;
+      width: 50px;
+      background: linear-gradient(to right, transparent, rgba(164, 114, 59, 0.35));
+    }
+    .section-ornament::after {
+      background: linear-gradient(to left, transparent, rgba(164, 114, 59, 0.35));
+    }
+
+    /* Gold Metallic Gradient Text */
+    .love-gold-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      background: linear-gradient(135deg, #A4723B 0%, #D4A86A 50%, #8E5E26 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-main-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.3rem, 4.8vw, 4.4rem);
+      line-height: 1.08;
+      font-weight: 700;
+      color: #2D2520;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+
+    /* Ambient Interactive Gold Spotlight Glow (Follows mouse on desktop) */
+    .ambient-cursor-glow {
+      position: fixed;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(212, 168, 106, 0.12) 0%, rgba(212, 168, 106, 0.04) 45%, transparent 70%);
+      pointer-events: none;
+      z-index: 1;
+      transform: translate(-50%, -50%);
+      transition: width 0.3s ease, height 0.3s ease, opacity 0.5s ease;
+      display: none;
+    }
+    @media (min-width: 1024px) {
+      .ambient-cursor-glow {
+        display: block;
+      }
+    }
+
+    /* ==========================================================================
+       CELESTIAL STAR DESIGN SYSTEM & STARBURST ORNAMENTS
+       ========================================================================== */
+    @keyframes starTwinkle {
+      0%, 100% {
+        opacity: 0.3;
+        transform: scale(0.8) rotate(0deg);
+        filter: drop-shadow(0 0 2px rgba(212, 168, 106, 0.3));
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.28) rotate(45deg);
+        filter: drop-shadow(0 0 10px rgba(212, 168, 106, 0.95)) drop-shadow(0 0 18px rgba(235, 195, 140, 0.6));
+      }
+    }
+
+    @keyframes starPulseGlow {
+      0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 4px rgba(212, 168, 106, 0.4));
+      }
+      50% {
+        transform: scale(1.18);
+        filter: drop-shadow(0 0 14px rgba(212, 168, 106, 0.9)) drop-shadow(0 0 24px rgba(235, 195, 140, 0.5));
+      }
+    }
+
+    @keyframes starFloatDrift {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-8px) rotate(12deg);
+      }
+    }
+
+    @keyframes starSpinSubtle {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Celestial 4-Point Star Icons */
+    .celestial-star {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #B6864C;
+      user-select: none;
+      pointer-events: none;
+      transition: all 0.4s ease;
+    }
+
+    .star-twinkle-1 {
+      animation: starTwinkle 3.2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    .star-twinkle-2 {
+      animation: starTwinkle 4.5s cubic-bezier(0.4, 0, 0.6, 1) infinite 1.2s;
+    }
+    .star-twinkle-3 {
+      animation: starTwinkle 5.1s cubic-bezier(0.4, 0, 0.6, 1) infinite 2.4s;
+    }
+    .star-float {
+      animation: starFloatDrift 6s ease-in-out infinite;
+    }
+
+    /* Floating Celestial Constellation Cluster */
+    .celestial-cluster {
+      position: absolute;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      z-index: 5;
+    }
+
+    /* Celestial Star Line Divider */
+    .celestial-star-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 1.5rem auto;
+      max-width: 320px;
+    }
+    .celestial-star-divider::before,
+    .celestial-star-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(182, 134, 76, 0.5), transparent);
+    }
+
+    /* Starburst Corner Accent for Cards */
+    .card-star-corner {
+      position: absolute;
+      color: #D4A86A;
+      filter: drop-shadow(0 0 4px rgba(212, 168, 106, 0.5));
+      pointer-events: none;
+      z-index: 25;
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    .polaroid-box:hover .card-star-corner,
+    .service-arch-card:hover .card-star-corner {
+      transform: scale(1.35) rotate(45deg);
+      filter: drop-shadow(0 0 10px rgba(212, 168, 106, 0.95));
+      color: #B6864C;
+    }
+
+    /* Star Rating Constellation (5 Gold Stars) */
+    .star-constellation-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: #B6864C;
+      filter: drop-shadow(0 0 3px rgba(212, 168, 106, 0.4));
+    }
+
+    /* Shimmer Light Sweep on Primary Buttons */
+    .btn-caramel-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #A4723B 0%, #B6864C 50%, #8C5D2A 100%);
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 14px 38px;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px rgba(164, 114, 59, 0.28), 0 8px 24px rgba(164, 114, 59, 0.25);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .btn-caramel-pill::after {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.35), transparent);
+      transform: rotate(25deg);
+      transition: all 0.75s ease;
+    }
+    .btn-caramel-pill:hover::after {
+      left: 120%;
+    }
+    .btn-caramel-pill:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 28px rgba(164, 114, 59, 0.45), 0 12px 28px rgba(164, 114, 59, 0.35);
+    }
+
+    .btn-secondary-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      color: #2A2521;
+      text-decoration: none;
+      padding: 13px 32px;
+      border-radius: 9999px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid rgba(212, 168, 106, 0.4);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.03);
+      transition: all 0.35s ease;
+    }
+    .btn-secondary-pill:hover {
+      border-color: #A4723B;
+      color: #A4723B;
+      background: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 0 18px rgba(212, 168, 106, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* Film Negative Badge */
+    .film-strip-stamp {
+      background: #110E0C;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      border-radius: 6px;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    }
+
+    /* Rotating Studio Seal */
+    .studio-seal-circle {
+      animation: spinSlow 24s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* ==========================================================================
+       SECTION 2: ABOUT THE ARTIST & PHILOSOPHY (DISTINCT EDITORIAL DOSSIER)
+       ========================================================================== */
+    .about-dossier-card {
+      background: linear-gradient(145deg, #FFFFFF 0%, #FAF6F0 100%);
+      border: 1px solid rgba(212, 168, 106, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 12px 36px -6px rgba(45, 35, 25, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .about-dossier-card:hover {
+      border-color: rgba(212, 168, 106, 0.85);
+      box-shadow: 0 0 28px rgba(212, 168, 106, 0.25), 0 16px 40px -6px rgba(45, 35, 25, 0.12);
+    }
+
+    .artist-portrait-frame {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+      background: #EDE4D6;
+      border: 1px solid rgba(212, 168, 106, 0.5);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+    .artist-portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.6s ease;
+    }
+    .about-dossier-card:hover .artist-portrait-frame img {
+      transform: scale(1.04);
+    }
+
+    .craft-step-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(212, 168, 106, 0.25);
+      transition: all 0.35s ease;
+    }
+    .craft-step-item:hover {
+      background: #FFFFFF;
+      border-color: rgba(212, 168, 106, 0.7);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(212, 168, 106, 0.15);
+    }
+
+    .camera-gear-frame {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      aspect-ratio: 16 / 10;
+      background: #110E0C;
+      border: 1px solid rgba(212, 168, 106, 0.35);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    .camera-gear-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.92;
+      transition: transform 0.6s ease;
+    }
+    .camera-gear-frame:hover img {
+      transform: scale(1.05);
+    }
+
+    /* Mobile Polaroid Swipe Track (Small, Dainty Thumbnails) */
+    .about-photo-track {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 8px 4px 12px;
+      width: 100%;
+    }
+    .about-photo-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .about-photo-item {
+      scroll-snap-align: center;
+      flex: 0 0 115px;
+    }
+
+    /* Polaroid Card Styles */
+    .polaroid-box {
+      background: #FFFFFF;
+      border: 1px solid rgba(226, 213, 195, 0.6);
+      box-shadow: 0 8px 24px -4px rgba(50, 40, 30, 0.06), 0 2px 8px rgba(50, 40, 30, 0.03);
+      border-radius: 8px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      cursor: pointer;
+    }
+    .polaroid-box:hover {
+      transform: translateY(-4px) scale(1.02) rotate(0deg) !important;
+      box-shadow: 0 16px 36px -4px rgba(50, 40, 30, 0.12);
+      border-color: rgba(182, 134, 76, 0.4);
+      z-index: 40 !important;
+    }
+
+    /* ==========================================================================
+       SECTION 3: OUR SERVICES (STICKY VANCE ARCH + LUMINOUS BORDER GLOW)
+       ========================================================================== */
+    .services-carousel-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .services-single-row-container {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      gap: 14px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      padding: 10px 14px 20px 2px;
+    }
+    .services-single-row-container::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Sticky Lead Photographer Arch (Pins to the left on swipe, luminous border glow) */
+    .service-lead-photographer-card {
+      position: sticky;
+      left: 0;
+      z-index: 30;
+      flex: 0 0 148px;
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+      padding-right: 4px;
+    }
+
+    .vance-sticky-arch-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 95px 95px 16px 16px;
+      overflow: hidden;
+      background: #F6EFE6;
+      border: 1px solid rgba(212, 168, 106, 0.45);
+      box-shadow: 0 0 20px rgba(212, 168, 106, 0.28), 0 8px 24px -4px rgba(45, 35, 25, 0.08);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+    }
+    .vance-sticky-arch-card:hover {
+      border-color: rgba(212, 168, 106, 0.85);
+      box-shadow: 0 0 28px rgba(212, 168, 106, 0.48), 0 12px 30px -4px rgba(45, 35, 25, 0.12);
+    }
+
+    .vance-arch-img-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #EDE4D6;
+    }
+    .vance-arch-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .vance-arch-info {
+      padding: 8px 4px 10px;
+      text-align: center;
+      background: #F6EFE6;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Service Cards (Pure Image with Warm Luminous Border Glow) */
+    .service-carousel-card {
+      scroll-snap-align: start;
+      flex: 0 0 148px;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-arch-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-radius: 95px 95px 16px 16px;
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1px solid rgba(212, 168, 106, 0.35);
+      box-shadow: 0 0 16px rgba(212, 168, 106, 0.22), 0 6px 20px -4px rgba(45, 35, 25, 0.06);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+      cursor: pointer;
+    }
+    .service-arch-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      border-color: rgba(212, 168, 106, 0.85);
+      box-shadow: 0 0 26px rgba(212, 168, 106, 0.45), 0 12px 28px -4px rgba(45, 35, 25, 0.12);
+    }
+
+    .service-arch-img-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      background: #EDE4D6;
+    }
+    .service-arch-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+    .service-arch-card:hover .service-arch-img-box img {
+      transform: scale(1.05);
+    }
+
+    .service-arch-info {
+      padding: 8px 6px 10px;
+      text-align: center;
+      background: #FFFFFF;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media (min-width: 640px) {
+      .service-lead-photographer-card,
+      .service-carousel-card {
+        flex: 0 0 175px;
+      }
+      .services-single-row-container {
+        gap: 16px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .service-lead-photographer-card,
+      .service-carousel-card {
+        flex: 0 0 205px;
+      }
+      .services-single-row-container {
+        gap: 20px;
+      }
+    }
+
+    /* ==========================================================================
+       35MM ANALOG FILM ROLL GALLERY (WARM EDITORIAL PALETTE — NO OVERLAPPING TEXT)
+       ========================================================================== */
+    .film-roll-container {
+      background: #FAF6F0;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px -6px rgba(60, 45, 30, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(212, 168, 106, 0.3);
+      position: relative;
+      overflow: hidden;
+      padding: 10px 0 14px;
+      width: 100%;
+    }
+
+    .film-sprocket-row {
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      height: 32px;
+      background: #EFE7DB;
+      border-bottom: 1px dashed rgba(164, 114, 59, 0.35);
+      user-select: none;
+      overflow: hidden;
+    }
+
+    .film-sprocket-row.bottom {
+      border-bottom: none;
+      border-top: 1px dashed rgba(164, 114, 59, 0.35);
+    }
+
+    .film-sprocket-flex-track {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      flex-wrap: nowrap;
+      overflow: hidden;
+    }
+
+    .sprocket-hole {
+      width: 12px;
+      height: 15px;
+      background: #FAF6F0;
+      border: 1px solid rgba(164, 114, 59, 0.35);
+      border-radius: 2px;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.08);
+      flex-shrink: 0;
+    }
+
+    .film-edge-code {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10px;
+      font-weight: 700;
+      color: #A4723B;
+      letter-spacing: 0.14em;
+      white-space: nowrap;
+      text-transform: uppercase;
+      opacity: 0.95;
+      flex-shrink: 0;
+    }
+
+    .film-track-scroll {
+      display: flex;
+      gap: 18px;
+      padding: 18px 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      cursor: grab;
+      width: 100%;
+    }
+    .film-track-scroll::-webkit-scrollbar {
+      display: none;
+    }
+    .film-track-scroll:active {
+      cursor: grabbing;
+    }
+
+    .film-frame-item {
+      flex: 0 0 260px;
+      background: #FFFFFF;
+      border: 1px solid rgba(228, 216, 199, 0.75);
+      border-radius: 10px;
+      padding: 9px;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 4px 16px rgba(60, 45, 30, 0.05);
+      cursor: pointer;
+    }
+
+    @media (min-width: 640px) {
+      .film-frame-item {
+        flex: 0 0 320px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .film-frame-item {
+        flex: 0 0 360px;
+      }
+    }
+
+    .film-frame-item:hover {
+      transform: translateY(-3px) scale(1.02);
+      border-color: rgba(182, 134, 76, 0.5);
+      box-shadow: 0 12px 28px rgba(164, 114, 59, 0.15);
+    }
+
+    .film-frame-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #EDE4D6;
+    }
+
+    .film-frame-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .film-frame-item:hover .film-frame-media img {
+      transform: scale(1.05);
+    }
+
+    .film-frame-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      color: #8C5D2A;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+    }
+
+    .film-filter-btn {
+      padding: 7px 18px;
+      border-radius: 9999px;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.35s ease;
+      cursor: pointer;
+      border: 1px solid rgba(164, 114, 59, 0.25);
+      background: #FFFFFF;
+      color: #7A695C;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+    .film-filter-btn.active, .film-filter-btn:hover {
+      background: #A4723B;
+      color: #FFFFFF;
+      border-color: #A4723B;
+      box-shadow: 0 4px 14px rgba(164, 114, 59, 0.22);
+    }
+
+    /* Fullscreen Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 14, 12, 0.92);
+      backdrop-filter: blur(12px);
+      z-index: 99999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      padding: 16px;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+<body>
+
+  <!-- Ambient Luxury Gold Cursor Glow (Desktop) -->
+  <div class="ambient-cursor-glow" id="ambientCursorGlow"></div>
+
+  <!-- ==========================================================================
+       FULLSCREEN MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+  <div class="modal-overlay" id="mobileNavModal">
+    <div class="relative bg-cream-100 border border-gold-500/30 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl">
+      <button id="closeNavBtn" class="absolute top-4 right-4 text-charcoal-900 text-2xl font-light hover:text-gold-600 transition-colors p-2" aria-label="Close Navigation">✕</button>
+      <div class="flex flex-col space-y-6 mt-6 font-serif text-2xl uppercase tracking-widest text-charcoal-900">
+        <a href="#home" class="hover:text-gold-600 transition-colors nav-link-click">Home</a>
+        <a href="#about" class="hover:text-gold-600 transition-colors nav-link-click">About Us</a>
+        <a href="#services" class="hover:text-gold-600 transition-colors nav-link-click">Our Services</a>
+        <a href="#gallery" class="hover:text-gold-600 transition-colors nav-link-click">Gallery</a>
+        <a href="#testimonials" class="hover:text-gold-600 transition-colors nav-link-click">Love Notes</a>
+        <a href="#inquire" class="hover:text-gold-600 transition-colors nav-link-click">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       1. HERO SECTION — ULTRA LUXURY EDITORIAL COMPOSITION WITH CELESTIAL STARS
+       ========================================================================== -->
+  <section class="hero-section px-4 sm:px-8 md:px-14 pt-6 pb-12 sm:pb-16 relative" id="home">
+    
+    <!-- Floating Celestial Starbursts & Constellation Sparkles -->
+    <div class="celestial-cluster top-16 right-12 sm:right-36">
+      <span class="celestial-star star-twinkle-1 text-gold-500 text-lg">✦</span>
+      <span class="celestial-star star-twinkle-2 text-gold-400 text-xs">✧</span>
+      <span class="celestial-star star-twinkle-3 text-gold-600 text-sm">⋆</span>
+    </div>
+
+    <div class="celestial-cluster top-1/2 left-6 sm:left-20">
+      <span class="celestial-star star-twinkle-2 text-gold-400 text-sm">✧</span>
+      <span class="celestial-star star-twinkle-1 text-gold-500 text-base">✦</span>
+    </div>
+
+    <div class="celestial-cluster bottom-24 right-8 sm:right-24">
+      <span class="celestial-star star-twinkle-3 text-gold-600 text-lg">✦</span>
+      <span class="celestial-star star-twinkle-1 text-gold-400 text-xs">✧</span>
+    </div>
+
+    <div class="celestial-cluster bottom-12 left-10 sm:left-1/3 hidden sm:flex">
+      <span class="celestial-star star-twinkle-2 text-gold-500 text-xs">⋆</span>
+      <span class="celestial-star star-twinkle-1 text-gold-400 text-sm">✧</span>
+    </div>
+    
+    <!-- Top Navigation Header -->
+    <header class="w-full max-w-7xl mx-auto flex items-center justify-between relative z-30 mb-8 sm:mb-12">
+      <!-- Logo: Aiden Vance Visual with Camera Emblem & Star Accents -->
+      <a href="#home" class="flex items-center gap-2.5 sm:gap-3 group">
+        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gold-500/90 flex items-center justify-center p-1.5 transition-transform group-hover:rotate-45 duration-500 bg-cream-100 shadow-sm relative">
+          <svg class="w-4 h-4 sm:w-5 sm:h-5 text-gold-600 stroke-current fill-none stroke-[1.6]" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
+            <circle cx="12" cy="12" r="7" stroke-dasharray="2 3"></circle>
+          </svg>
+          <span class="absolute -top-1 -right-1 text-[9px] text-gold-500 font-bold">✦</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-1.5">
+            <span class="font-serif text-base sm:text-lg md:text-xl font-bold tracking-widest leading-none uppercase text-charcoal-900">AIDEN VANCE</span>
+            <span class="text-gold-500 text-[10px]">✦</span>
+          </div>
+          <span class="text-[8px] sm:text-[9px] tracking-[0.38em] text-gold-600 font-sans uppercase mt-0.5 font-semibold">VISUAL</span>
+        </div>
+      </a>
+
+      <!-- Quick Nav Links (Desktop) -->
+      <nav class="hidden md:flex items-center gap-8 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-charcoal-800">
+        <a href="#about" class="hover:text-gold-600 transition-colors">About</a>
+        <a href="#services" class="hover:text-gold-600 transition-colors">Services</a>
+        <a href="#gallery" class="hover:text-gold-600 transition-colors">Gallery</a>
+        <a href="#testimonials" class="hover:text-gold-600 transition-colors">Love Notes</a>
+        <a href="#inquire" class="text-gold-600 hover:text-caramel-600 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Minimal 3-bar Hamburger Menu (Mobile & Quick Access) -->
+      <button id="openNavBtn" aria-label="Toggle Navigation Menu" class="flex flex-col items-end gap-1.5 p-2 focus:outline-none group cursor-pointer">
+        <span class="w-6 sm:w-7 h-[2px] bg-charcoal-900 transition-all duration-300 group-hover:w-8 group-hover:bg-gold-600"></span>
+        <span class="w-4 sm:w-5 h-[2px] bg-charcoal-900 transition-all duration-300 group-hover:w-8 group-hover:bg-gold-600"></span>
+        <span class="w-6 sm:w-7 h-[2px] bg-charcoal-900 transition-all duration-300 group-hover:w-8 group-hover:bg-gold-600"></span>
+      </button>
+    </header>
+
+    <!-- Ambient Background Watermark -->
+    <div class="bg-watermark-text text-[15vw] -top-8 left-4 opacity-30 select-none">EDITORIAL</div>
+
+    <!-- Main Editorial Hero Grid -->
+    <div class="w-full max-w-7xl mx-auto my-auto flex flex-col lg:grid lg:grid-cols-12 gap-8 lg:gap-8 items-center relative z-20">
+      
+      <!-- Left Editorial Column (Desktop) / Title on Mobile (Order 1) -->
+      <div class="w-full lg:col-span-6 flex flex-col items-start text-left order-1 lg:order-1">
+        
+        <!-- Luxury Eyebrow Tag with Golden Stars -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cream-200/90 border border-gold-500/40 text-gold-600 font-sans text-[10px] sm:text-xs font-semibold uppercase tracking-[0.25em] mb-4 shadow-xs">
+          <span class="text-gold-500 text-xs">✦</span>
+          <span>FINE ART &amp; WEDDING CINEMA</span>
+          <span class="text-gold-500 text-xs">✦</span>
+        </div>
+
+        <!-- Grand Editorial Headline -->
+        <h1 class="hero-main-title mb-6 lg:mb-8">
+          CAPTURE <span class="love-gold-text">LOVE</span><br/>
+          IN PRECIOUS<br/>
+          MOMENTS
+        </h1>
+
+        <!-- Desktop Action Buttons (Hidden on Mobile) -->
+        <div class="hidden lg:flex flex-wrap items-center gap-4 mb-8">
+          <a href="#inquire" class="btn-caramel-pill group">
+            <span class="text-gold-300 text-xs">✦</span>
+            <span>Book a Lens</span>
+            <svg class="w-4 h-4 fill-none stroke-current stroke-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#gallery" class="btn-secondary-pill">
+            <span>Explore Stories</span>
+            <span class="text-gold-600 text-xs">✧</span>
+          </a>
+        </div>
+
+        <!-- Desktop Trust Bar (Hidden on Mobile) -->
+        <div class="hidden lg:flex w-full pt-6 border-t border-neutral-300/70 items-center justify-start gap-10 text-charcoal-900">
+          <div>
+            <p class="font-serif text-2xl font-bold leading-none flex items-center gap-1">12<span class="text-gold-600">+</span> <span class="text-gold-500 text-xs">✦</span></p>
+            <p class="font-sans text-[10px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">Years Fine Art</p>
+          </div>
+          <div class="h-7 w-[1px] bg-neutral-300"></div>
+          <div>
+            <p class="font-serif text-2xl font-bold leading-none flex items-center gap-1">350<span class="text-gold-600">+</span> <span class="text-gold-500 text-xs">✧</span></p>
+            <p class="font-sans text-[10px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">Weddings Captured</p>
+          </div>
+          <div class="h-7 w-[1px] bg-neutral-300"></div>
+          <div>
+            <p class="font-serif text-xl font-bold leading-none flex items-center gap-1">VOGUE <span class="text-gold-500 text-xs">✦</span></p>
+            <p class="font-sans text-[10px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">&amp; ELLE FEATURED</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Editorial Collage Column (Order 2 on Mobile, Right Column on Desktop) -->
+      <div class="w-full lg:col-span-6 relative flex items-center justify-center min-h-[380px] sm:min-h-[460px] md:min-h-[520px] order-2 lg:order-2 my-2 lg:my-0">
+        
+        <!-- Rotating Studio Crest Badge with Stars -->
+        <div class="absolute -top-4 -right-2 sm:right-4 z-30 w-20 h-20 sm:w-24 sm:h-24 pointer-events-none hidden sm:flex items-center justify-center">
+          <svg class="w-full h-full studio-seal-circle text-gold-600/70" viewBox="0 0 100 100">
+            <path id="circlePath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none"></path>
+            <text font-size="8.5" font-family="Montserrat" font-weight="600" letter-spacing="2" fill="currentColor">
+              <textPath href="#circlePath">✦ AIDEN VANCE VISUAL ✦ FINE ART ✧</textPath>
+            </text>
+          </svg>
+          <div class="absolute w-8 h-8 rounded-full bg-cream-100 border border-gold-500 flex items-center justify-center shadow-xs">
+            <span class="text-gold-600 text-xs font-serif font-bold">AV</span>
+          </div>
+        </div>
+
+        <!-- Background Polaroid: Romantic Outdoors (Tilted Left) with Corner Star -->
+        <div class="absolute left-2 sm:left-4 top-4 sm:top-6 w-40 sm:w-56 polaroid-box p-2 sm:p-2.5 pb-5 sm:pb-6 -rotate-6 z-10 relative" data-lightbox="true" data-title="Lace Veil Whisper" data-meta="Cotswolds, England">
+          <span class="card-star-corner top-2 right-2 text-gold-500 text-xs">✦</span>
+          <div class="aspect-[4/5] overflow-hidden bg-cream-200">
+            <img alt="Bride and groom romantic moment" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=500&q=80"/>
+          </div>
+          <p class="font-script text-base sm:text-lg text-neutral-600 text-center mt-2 leading-none">Sweet Serenity ✧</p>
+        </div>
+
+        <!-- Foreground Centerpiece Polaroid: Sunset Couple Embrace with Corner Stars -->
+        <div class="relative z-20 w-52 sm:w-72 md:w-80 polaroid-box p-2.5 sm:p-3 pb-6 sm:pb-8 shadow-2xl rotate-2" data-lightbox="true" data-title="Sara & Daniel — Sunset Embrace" data-meta="Villa Balbiano, Lake Como">
+          <span class="card-star-corner top-2 right-2 text-gold-500 text-sm">✦</span>
+          <span class="card-star-corner top-2 left-2 text-gold-400 text-xs">✧</span>
+          <div class="aspect-[3/4] overflow-hidden bg-cream-200">
+            <img alt="Couple romantic portrait" class="w-full h-full object-cover" src="assets/images/couple-romantic.jpg"/>
+          </div>
+          <div class="mt-2.5 sm:mt-3 flex items-center justify-between px-1">
+            <p class="font-script text-lg sm:text-2xl text-charcoal-900 leading-none">Sara &amp; Daniel</p>
+            <div class="flex items-center gap-1">
+              <span class="text-gold-500 text-[10px]">✦</span>
+              <span class="font-sans text-[8px] sm:text-[9px] uppercase tracking-widest text-gold-600 font-semibold">LAKE COMO</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foreground Polaroid: Golden Rings & Florals (Tilted Right) with Corner Star -->
+        <div class="absolute right-1 sm:right-6 -bottom-4 sm:bottom-2 w-36 sm:w-52 polaroid-box p-1.5 sm:p-2 pb-4 sm:pb-5 rotate-8 z-30 shadow-xl relative" data-lightbox="true" data-title="Heirloom Gold Bands" data-meta="Florence, Italy">
+          <span class="card-star-corner top-1.5 right-1.5 text-gold-500 text-xs">✦</span>
+          <div class="aspect-square overflow-hidden bg-cream-200">
+            <img alt="Golden wedding rings" class="w-full h-full object-cover" src="assets/images/rings-gold.jpg"/>
+          </div>
+          <p class="font-script text-sm sm:text-base text-neutral-600 text-center mt-1.5 leading-none">Forever &amp; Always ✦</p>
+        </div>
+
+        <!-- 35mm Analog Negative Badge (Bottom Left) -->
+        <div class="absolute left-4 sm:left-12 -bottom-4 z-30 film-strip-stamp hidden sm:flex items-center gap-2 text-white/90">
+          <span class="text-gold-400 text-[9px]">✦</span>
+          <span class="text-[8px] tracking-widest font-mono text-gold-400 font-bold uppercase">35MM ANALOG</span>
+          <span class="text-[7px] tracking-wider text-neutral-400">PORTRA 400</span>
+        </div>
+
+      </div>
+
+      <!-- Mobile CTA Buttons (Order 3 on Mobile, Hidden on Desktop) -->
+      <div class="w-full flex lg:hidden flex-wrap items-center justify-center sm:justify-start gap-3 order-3 mt-4">
+        <a href="#inquire" class="btn-caramel-pill group flex-1 sm:flex-initial text-center justify-center">
+          <span>Book a Lens</span>
+          <svg class="w-4 h-4 fill-none stroke-current stroke-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#gallery" class="btn-secondary-pill flex-1 sm:flex-initial text-center justify-center">
+          <span>Explore Stories</span>
+        </a>
+      </div>
+
+      <!-- Mobile Trust Bar (Order 4 on Mobile, Hidden on Desktop) -->
+      <div class="w-full flex lg:hidden pt-5 border-t border-neutral-300/70 items-center justify-between gap-4 text-charcoal-900 order-4 mt-2">
+        <div class="text-center sm:text-left">
+          <p class="font-serif text-lg sm:text-xl font-bold leading-none">12<span class="text-gold-600">+</span></p>
+          <p class="font-sans text-[8px] sm:text-[9px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">Years Fine Art</p>
+        </div>
+        <div class="h-6 w-[1px] bg-neutral-300"></div>
+        <div class="text-center sm:text-left">
+          <p class="font-serif text-lg sm:text-xl font-bold leading-none">350<span class="text-gold-600">+</span></p>
+          <p class="font-sans text-[8px] sm:text-[9px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">Weddings</p>
+        </div>
+        <div class="h-6 w-[1px] bg-neutral-300"></div>
+        <div class="text-center sm:text-left">
+          <p class="font-serif text-base sm:text-lg font-bold leading-none">VOGUE</p>
+          <p class="font-sans text-[8px] sm:text-[9px] tracking-widest uppercase text-neutral-500 font-semibold mt-1">&amp; ELLE</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Empty spacer for balance -->
+    <div class="h-2"></div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: ABOUT THE ARTIST & PHILOSOPHY (DISTINCT EDITORIAL DOSSIER)
+       ========================================================================== -->
+  <section class="py-16 sm:py-24 md:py-32 px-4 sm:px-8 md:px-14 relative max-w-7xl mx-auto overflow-hidden" id="about">
+    
+    <!-- Ambient Background Watermark -->
+    <div class="bg-watermark-text text-[15vw] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-15 select-none">VISIONARY</div>
+
+    <!-- Floating Celestial Sparkles in About -->
+    <div class="celestial-cluster top-8 left-8 hidden sm:flex">
+      <span class="celestial-star star-twinkle-1 text-gold-500 text-base">✦</span>
+      <span class="celestial-star star-twinkle-2 text-gold-400 text-xs">✧</span>
+    </div>
+    <div class="celestial-cluster top-12 right-12 hidden sm:flex">
+      <span class="celestial-star star-twinkle-3 text-gold-600 text-sm">✧</span>
+      <span class="celestial-star star-twinkle-1 text-gold-500 text-lg">✦</span>
+    </div>
+
+    <!-- Section Header Eyebrow -->
+    <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16 relative z-10">
+      <div class="celestial-star-divider mb-4">
+        <span class="text-gold-500 text-xs star-twinkle-1">✦</span>
+        <span class="font-sans font-semibold uppercase tracking-[0.3em] text-xs text-gold-600 px-3">THE ARTIST BEHIND THE LENS</span>
+        <span class="text-gold-500 text-xs star-twinkle-2">✦</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-charcoal-900 leading-[1.15]">
+        CRAFTING STORIES OF <span class="love-gold-text">UNSPOKEN ROMANCE</span>
+      </h2>
+      <p class="font-editorial italic text-lg sm:text-2xl text-neutral-700 leading-snug mt-3">
+        “We don’t simply record what a wedding looks like — we bottle how your deepest love felt under the Tuscan sun.”
+      </p>
+    </div>
+
+    <!-- 3-Column Luxury Dossier & Editorial Spread -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch relative z-20">
+      
+      <!-- Column 1: The Artist Dossier Card (4 cols) -->
+      <div class="lg:col-span-4 flex flex-col">
+        <div class="about-dossier-card p-6 h-full flex flex-col justify-between">
+          <div>
+            <div class="artist-portrait-frame mb-5 relative group" data-lightbox="true" data-title="Aiden Vance — Principal Artist" data-meta="Europe & Worldwide · Fine Art & Cinema">
+              <span class="card-star-corner top-3 right-3 text-gold-500 text-xs">✦</span>
+              <img alt="Aiden Vance — Lead Editorial Photographer" src="assets/images/photographer-aiden.jpg"/>
+              <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-white px-2.5 py-1 rounded-full text-[9px] font-sans font-semibold tracking-wider uppercase">
+                ✦ LEAD ARTIST
+              </div>
+            </div>
+            
+            <h3 class="font-serif text-2xl font-bold text-charcoal-900 uppercase tracking-wide">
+              AIDEN VANCE
+            </h3>
+            <p class="font-sans text-[9px] uppercase tracking-[0.25em] text-gold-600 font-bold mt-1">
+              DIRECTOR &amp; PRINCIPAL CINEMATOGRAPHER
+            </p>
+            
+            <p class="font-sans text-xs text-neutral-600 leading-relaxed mt-3">
+              With over 12 years documenting luxury destination weddings across Lake Como, Paris, Amalfi, and the Cotswolds, Aiden's work is celebrated for its poetic light, quiet intimacy, and timeless editorial composition.
+            </p>
+          </div>
+
+          <div class="pt-5 mt-5 border-t border-neutral-300/60 flex items-center justify-between">
+            <div>
+              <p class="font-script text-2xl text-charcoal-900 leading-none">Aiden Vance</p>
+              <p class="font-sans text-[7.5px] uppercase tracking-widest text-neutral-400 mt-1">STUDIO FOUNDER</p>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-cream-200 border border-gold-500/60 flex items-center justify-center text-gold-600 font-serif font-bold text-xs shadow-2xs">
+              AV
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: The Philosophy & 3 Craft Tenets (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col justify-between space-y-4">
+        
+        <div class="craft-step-item">
+          <div class="w-8 h-8 rounded-full bg-cream-200 border border-gold-500/60 flex items-center justify-center text-gold-600 font-serif font-bold text-xs flex-shrink-0 shadow-2xs">
+            01
+          </div>
+          <div>
+            <h4 class="font-sans text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1 flex items-center gap-1.5">
+              <span>35mm Analog Alchemy</span> <span class="text-gold-500 text-[9px]">✦</span>
+            </h4>
+            <p class="font-sans text-[11px] text-neutral-600 leading-relaxed">
+              We shoot authentic Kodak Portra 400 and Tri-X analog film stocks to achieve warm, creamy skintones and an unmistakable nostalgic glow that digital filters cannot duplicate.
+            </p>
+          </div>
+        </div>
+
+        <div class="craft-step-item">
+          <div class="w-8 h-8 rounded-full bg-cream-200 border border-gold-500/60 flex items-center justify-center text-gold-600 font-serif font-bold text-xs flex-shrink-0 shadow-2xs">
+            02
+          </div>
+          <div>
+            <h4 class="font-sans text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1 flex items-center gap-1.5">
+              <span>Unscripted Editorial Direction</span> <span class="text-gold-500 text-[9px]">✧</span>
+            </h4>
+            <p class="font-sans text-[11px] text-neutral-600 leading-relaxed">
+              Never awkward or stiff. We guide you with gentle, subtle prompts that evoke genuine laughter, unforced intimacy, and effortless grace.
+            </p>
+          </div>
+        </div>
+
+        <div class="craft-step-item">
+          <div class="w-8 h-8 rounded-full bg-cream-200 border border-gold-500/60 flex items-center justify-center text-gold-600 font-serif font-bold text-xs flex-shrink-0 shadow-2xs">
+            03
+          </div>
+          <div>
+            <h4 class="font-sans text-xs font-bold uppercase tracking-wider text-charcoal-900 mb-1 flex items-center gap-1.5">
+              <span>Handcrafted Italian Heirlooms</span> <span class="text-gold-500 text-[9px]">✦</span>
+            </h4>
+            <p class="font-sans text-[11px] text-neutral-600 leading-relaxed">
+              Every couple receives bespoke archival albums bound in Florence with fine art Japanese cotton paper, crafted to be passed down through generations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Press Accolades Bar -->
+        <div class="p-4 rounded-xl bg-cream-100/90 border border-gold-500/30 text-center">
+          <p class="font-sans text-[8px] uppercase tracking-[0.28em] text-gold-600 font-bold mb-2">
+            ✦ AS FEATURED IN GLOBAL EDITORIALS ✦
+          </p>
+          <div class="flex items-center justify-center gap-6 text-charcoal-800 font-serif text-xs sm:text-sm font-semibold tracking-widest uppercase">
+            <span>VOGUE</span>
+            <span>•</span>
+            <span>HARPER'S BAZAAR</span>
+            <span>•</span>
+            <span>ELLE</span>
+            <span>•</span>
+            <span>BRIDES</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Column 3: The Camera Craft & Booking Invitation (3 cols) -->
+      <div class="lg:col-span-3 flex flex-col justify-between about-dossier-card p-5">
+        <div>
+          <div class="camera-gear-frame mb-4 relative" data-lightbox="true" data-title="Contax 645 &amp; Leica M6" data-meta="Analog Medium Format &amp; 35mm Rangefinders">
+            <span class="card-star-corner top-2 right-2 text-gold-500 text-[10px]">✦</span>
+            <img alt="Vintage camera gear" src="assets/images/hero-camera.jpg"/>
+            <div class="absolute bottom-2 left-2 bg-black/60 backdrop-blur-xs text-gold-400 px-2 py-0.5 rounded-sm text-[8px] font-mono font-bold tracking-wider">
+              35MM &amp; MEDIUM FORMAT
+            </div>
+          </div>
+
+          <h4 class="font-serif text-lg font-bold uppercase text-charcoal-900 mb-1">
+            ANALOG SOUL
+          </h4>
+          <p class="font-sans text-[10.5px] text-neutral-600 leading-relaxed mb-4">
+            Mastering natural light, shadow, and medium-format optics to create timeless imagery that defies fleeting trends.
+          </p>
+
+          <div class="space-y-2 border-t border-neutral-300/60 pt-3 text-[9.5px] font-sans text-charcoal-800">
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-500">EXPERIENCE:</span>
+              <span class="font-semibold text-gold-600">12+ YEARS</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-500">COVERAGE:</span>
+              <span class="font-semibold">WORLDWIDE</span>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-neutral-500">ANNUAL WEDDINGS:</span>
+              <span class="font-semibold text-gold-600">LIMITED TO 20</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-4 mt-3 border-t border-neutral-300/60 text-center">
+          <a href="#inquire" class="btn-caramel-pill w-full py-2.5 px-4 text-[11px] group text-center justify-center">
+            <span class="text-gold-300 text-xs">✦</span>
+            <span>Reserve Date</span>
+            <svg class="w-3.5 h-3.5 fill-none stroke-current stroke-2 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: OUR SERVICES (SINGLE ROW, MATCHED IMAGE SIZE, STAR ACCENTS, NO BLUR)
+       ========================================================================== -->
+  <section class="py-14 sm:py-20 md:py-28 px-4 sm:px-8 md:px-14 max-w-7xl mx-auto relative overflow-hidden" id="services">
+    
+    <!-- Ambient Background Watermark -->
+    <div class="bg-watermark-text text-[15vw] top-12 right-2 opacity-20 select-none">SERVICES</div>
+
+    <!-- Floating Celestial Sparkles in Services -->
+    <div class="celestial-cluster top-6 right-16 hidden sm:flex">
+      <span class="celestial-star star-twinkle-2 text-gold-500 text-sm">✦</span>
+      <span class="celestial-star star-twinkle-1 text-gold-400 text-xs">✧</span>
+    </div>
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-14 gap-4 border-b border-neutral-300/60 pb-6 text-center md:text-left relative z-10">
+      <div>
+        <div class="inline-flex items-center justify-center md:justify-start gap-2 text-gold-600 font-sans text-xs font-semibold uppercase tracking-[0.3em] mb-2">
+          <span class="text-gold-500 text-xs">✦</span>
+          <span>CURATED SERVICES</span>
+          <span class="text-gold-500 text-xs">✦</span>
+        </div>
+        <h2 class="font-serif text-2.5xl sm:text-3xl md:text-5xl text-charcoal-900 uppercase font-semibold">
+          YOUR STORY, BEAUTIFULLY TOLD
+        </h2>
+      </div>
+
+      <!-- Mobile Swipe Hint & Next/Prev Controls -->
+      <div class="flex items-center justify-between md:justify-end gap-3 lg:hidden px-1">
+        <span class="font-mono text-[10px] text-neutral-500 uppercase tracking-widest flex items-center gap-1.5">
+          <span class="text-gold-600">✦</span> SWIPE TO REVEAL
+        </span>
+        <div class="flex items-center gap-2">
+          <button id="servicePrevBtn" aria-label="Previous Service" class="w-7 h-7 rounded-full border border-neutral-400/70 bg-cream-100 flex items-center justify-center text-charcoal-800 text-xs hover:bg-neutral-900 hover:text-white transition-colors cursor-pointer">←</button>
+          <button id="serviceNextBtn" aria-label="Next Service" class="w-7 h-7 rounded-full border border-neutral-400/70 bg-cream-100 flex items-center justify-center text-charcoal-800 text-xs hover:bg-neutral-900 hover:text-white transition-colors cursor-pointer">→</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clean Horizontal Swipe Carousel with Warm Border Glow -->
+    <div class="services-carousel-wrapper relative z-10">
+      <div class="services-single-row-container relative z-10" id="servicesContainer">
+        
+        <!-- Lead Artist Card (Aiden Vance) - STICKY ARCH WITH CELESTIAL STAR ACCENT -->
+        <div class="service-lead-photographer-card">
+          <div class="vance-sticky-arch-card relative">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-xs">✦</span>
+            <div class="vance-arch-img-box">
+              <div class="absolute bottom-2 left-2 text-gold-500 z-10">
+                <svg class="w-4 h-4 sm:w-5 sm:h-5 fill-current drop-shadow-sm star-twinkle-1" viewBox="0 0 24 24">
+                  <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"></path>
+                </svg>
+              </div>
+              <img alt="Lead Photographer Aiden Vance with Camera" class="w-full h-full object-cover object-center" src="assets/images/photographer-aiden.jpg"/>
+            </div>
+            <div class="vance-arch-info">
+              <div class="flex items-center gap-1 justify-center">
+                <p class="font-sans text-[8.5px] sm:text-[9.5px] md:text-[10.5px] tracking-widest uppercase text-charcoal-900 font-bold leading-tight">AIDEN VANCE</p>
+                <span class="text-gold-500 text-[8px]">✦</span>
+              </div>
+              <span class="font-sans text-[6.5px] sm:text-[7.5px] md:text-[8.5px] tracking-wider text-gold-600 uppercase font-semibold mt-0.5">PRINCIPAL ARTIST</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 01: Wedding Day Photography -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Wedding Day Photography" data-meta="Full Day Documentary &amp; Fine Art">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">01</span>
+              <img alt="Wedding day couple photo" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                WEDDING DAY<br/>PHOTOGRAPHY
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5 flex items-center justify-center gap-1">
+                <span>Fine Art &amp; Candid</span> <span class="text-gold-500 text-[8px]">✧</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 02: Pre-Wedding & Engagement -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Pre-Wedding &amp; Engagement" data-meta="Golden Hour Romance Sessions">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">02</span>
+              <img alt="Engagement rings" src="assets/images/rings-gold.jpg"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                PRE-WEDDING &amp;<br/>ENGAGEMENT
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5">Golden Hour Romance</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 03: Wedding Cinematography -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Wedding Cinematography" data-meta="4K Cinema &amp; Super 8mm Film">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">03</span>
+              <img alt="Bride in flower field" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=600&q=80"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                WEDDING<br/>CINEMATOGRAPHY
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5 flex items-center justify-center gap-1">
+                <span>4K &amp; Super 8 Reels</span> <span class="text-gold-500 text-[8px]">✧</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 04: Destination Elopements -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Destination Elopements" data-meta="Lake Como, Paris, Amalfi Coast">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">04</span>
+              <img alt="Couple in romantic sunset embrace" src="assets/images/couple-romantic.jpg"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                DESTINATION<br/>ELOPEMENTS
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5 flex items-center justify-center gap-1">
+                <span>Worldwide Access</span> <span class="text-gold-500 text-[8px]">✦</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 05: Editorial Bridal Sessions -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Editorial Bridal Portraits" data-meta="Haute Couture &amp; Fine Art Gowns">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">05</span>
+              <img alt="Bride in white lace veil" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=600&q=80"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                EDITORIAL BRIDAL<br/>PORTRAITS
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5 flex items-center justify-center gap-1">
+                <span>Fashion &amp; Couture</span> <span class="text-gold-500 text-[8px]">✧</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 06: Private Celebrations -->
+        <div class="service-carousel-card">
+          <div class="service-arch-card group relative" data-lightbox="true" data-title="Private Celebrations" data-meta="Rehearsal Dinners &amp; Afterparties">
+            <span class="card-star-corner top-3 right-3 text-gold-500 text-[10px]">✦</span>
+            <div class="service-arch-img-box">
+              <span class="absolute top-2 left-2 z-10 font-serif text-xs font-bold text-white bg-black/40 backdrop-blur-xs px-2 py-0.5 rounded-full leading-none">06</span>
+              <img alt="Couple celebration" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=600&q=80"/>
+            </div>
+            <div class="service-arch-info">
+              <h3 class="font-sans text-[8px] sm:text-[9px] md:text-[10px] uppercase tracking-[0.12em] font-bold text-charcoal-900 leading-tight">
+                REHEARSAL &amp;<br/>AFTERPARTIES
+              </h3>
+              <p class="font-sans text-[6.5px] sm:text-[7.5px] text-neutral-500 uppercase tracking-wider mt-0.5 flex items-center justify-center gap-1">
+                <span>Candid 35mm Moments</span> <span class="text-gold-500 text-[8px]">✦</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: 35MM ANALOG FILM ROLL GALLERY (WITH CELESTIAL ACCENTS)
+       ========================================================================== -->
+  <section class="py-14 sm:py-20 md:py-28 px-4 sm:px-8 md:px-14 max-w-7xl mx-auto relative overflow-hidden" id="gallery">
+    
+    <!-- Floating Celestial Sparkles in Gallery -->
+    <div class="celestial-cluster top-8 right-12 hidden sm:flex">
+      <span class="celestial-star star-twinkle-3 text-gold-500 text-sm">✦</span>
+      <span class="celestial-star star-twinkle-1 text-gold-400 text-xs">✧</span>
+    </div>
+
+    <!-- Section Header & Film Stock Filter Controls -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-6 relative z-10">
+      <div>
+        <div class="inline-flex items-center gap-2 text-gold-600 font-sans text-xs font-semibold uppercase tracking-[0.3em] mb-2">
+          <span class="text-gold-500 text-xs">✦</span>
+          <span>35MM ANALOG ARCHIVE</span>
+          <span class="text-gold-500 text-xs">✦</span>
+        </div>
+        <h2 class="font-serif text-2.5xl sm:text-3xl md:text-5xl text-charcoal-900 uppercase font-semibold">
+          CAPTURED ON FILM
+        </h2>
+      </div>
+
+      <!-- Film Stock Filter Buttons -->
+      <div class="flex flex-wrap items-center gap-2 sm:gap-3">
+        <button class="film-filter-btn active" data-filter="all">✦ All Frames</button>
+        <button class="film-filter-btn" data-filter="portra">Portra 400</button>
+        <button class="film-filter-btn" data-filter="bw">Tri-X B&amp;W</button>
+        <button class="film-filter-btn" data-filter="cinestill">Cinestill 800T</button>
+      </div>
+    </div>
+
+    <!-- 35mm Continuous Film Strip Container -->
+    <div class="film-roll-container">
+      
+      <!-- Top Sprocket Row -->
+      <div class="film-sprocket-row">
+        <div class="film-sprocket-flex-track">
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">✦ KODAK PORTRA 400</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">36 EXP ✧</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">AIDEN VANCE ARCHIVES ✦</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">DX 400-36</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+        </div>
+      </div>
+
+      <!-- Scrollable Film Frames Track -->
+      <div class="film-track-scroll" id="filmTrack">
+        
+        <!-- Frame 01 -->
+        <div class="film-frame-item relative" data-category="portra" data-lightbox="true" data-title="Sara & Daniel — Sunset Embrace" data-meta="Villa Balbiano, Lake Como · 35mm Portra 400 · f/1.4">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✦</span>
+          <div class="film-frame-media">
+            <img alt="Sara and Daniel romance" src="assets/images/couple-romantic.jpg"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 01A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold flex items-center gap-1">
+              <span>LAKE COMO</span> <span class="text-gold-500 text-[8px]">✦</span>
+            </span>
+            <span>EXP 01</span>
+          </div>
+        </div>
+
+        <!-- Frame 02 -->
+        <div class="film-frame-item relative" data-category="portra" data-lightbox="true" data-title="Heirloom Gold Bands & Dried Botanicals" data-meta="Florence Hills, Italy · Macro 50mm · Portra 400">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✧</span>
+          <div class="film-frame-media">
+            <img alt="Heirloom gold rings" src="assets/images/rings-gold.jpg"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 02A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">FLORENCE</span>
+            <span>EXP 02</span>
+          </div>
+        </div>
+
+        <!-- Frame 03 -->
+        <div class="film-frame-item relative" data-category="portra" data-lightbox="true" data-title="Lace Bridal Veil in Morning Light" data-meta="Parisian Suite, France · Natural Light · Portra 400">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✦</span>
+          <div class="film-frame-media">
+            <img alt="Lace bridal veil" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 03A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">PARIS</span>
+            <span>EXP 03</span>
+          </div>
+        </div>
+
+        <!-- Frame 04 -->
+        <div class="film-frame-item relative" data-category="portra" data-lightbox="true" data-title="Golden Hour Champagne Celebration" data-meta="Château de Chantilly · Golden Hour · Portra 400">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✧</span>
+          <div class="film-frame-media">
+            <img alt="Couple laughing outdoors" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 04A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">CHANTILLY</span>
+            <span>EXP 04</span>
+          </div>
+        </div>
+
+        <!-- Frame 05 -->
+        <div class="film-frame-item relative" data-category="bw" data-lightbox="true" data-title="First Dance Under the Stars" data-meta="Amalfi Coast, Italy · Kodak Tri-X 400 Monochrome">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✦</span>
+          <div class="film-frame-media">
+            <img alt="Couple in romantic embrace" class="grayscale contrast-125" src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 05A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">TRI-X 400 B&amp;W</span>
+            <span>EXP 05</span>
+          </div>
+        </div>
+
+        <!-- Frame 06 -->
+        <div class="film-frame-item relative" data-category="cinestill" data-lightbox="true" data-title="Unscripted Laughter in the Countryside" data-meta="Cotswolds, UK · Cinestill 800T Halation">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✧</span>
+          <div class="film-frame-media">
+            <img alt="Laughing couple outdoors" src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 06A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">COTSWOLDS</span>
+            <span>EXP 06</span>
+          </div>
+        </div>
+
+        <!-- Frame 07 -->
+        <div class="film-frame-item relative" data-category="portra" data-lightbox="true" data-title="Vintage Getaway Romance" data-meta="Positano Cliffside Highway · 35mm Portra 400">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✦</span>
+          <div class="film-frame-media">
+            <img alt="Romantic getaway" src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 07A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">POSITANO</span>
+            <span>EXP 07</span>
+          </div>
+        </div>
+
+        <!-- Frame 08 -->
+        <div class="film-frame-item relative" data-category="cinestill" data-lightbox="true" data-title="Al Fresco Candlelight Gathering" data-meta="Piazza del Duomo, Florence · Cinestill 800T">
+          <span class="card-star-corner top-2.5 right-2.5 text-gold-500 text-[10px]">✧</span>
+          <div class="film-frame-media">
+            <img alt="Intimate dinner lights" src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80"/>
+          </div>
+          <div class="film-frame-info">
+            <span>▶ 08A</span>
+            <span class="text-neutral-600 font-sans text-[9px] uppercase tracking-widest font-semibold">FLORENCE NOCTURNE</span>
+            <span>EXP 08</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sprocket Row -->
+      <div class="film-sprocket-row bottom">
+        <div class="film-sprocket-flex-track">
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">✦ SAFETY FILM</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">MADE IN USA ✧</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">ISO 400/27°</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="film-edge-code">35MM FINE ART ✦</span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+          <span class="sprocket-hole"></span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Film Transport Nav Buttons & Interactive Instructions -->
+    <div class="flex flex-col sm:flex-row items-center justify-between mt-6 gap-4">
+      <p class="font-mono text-xs text-neutral-500 tracking-wider flex items-center gap-2">
+        <span class="text-gold-600">✦</span> DRAG OR SCROLL FILM STRIP • CLICK ANY FRAME TO EXPAND <span>✧</span>
+      </p>
+
+      <div class="flex items-center gap-3">
+        <button id="filmPrevBtn" aria-label="Rewind Film Roll" class="px-4 py-2 rounded-full border border-neutral-400/80 bg-cream-100 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 font-mono text-xs tracking-wider transition-all cursor-pointer flex items-center gap-2">
+          <span>◀</span> REWIND
+        </button>
+        <button id="filmNextBtn" aria-label="Advance Film Roll" class="px-4 py-2 rounded-full border border-neutral-400/80 bg-cream-100 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 font-mono text-xs tracking-wider transition-all cursor-pointer flex items-center gap-2">
+          ADVANCE <span>▶</span>
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: LOVE NOTES / TESTIMONIALS (WITH 5-STAR CONSTELLATION RATING)
+       ========================================================================== -->
+  <section class="py-14 sm:py-20 md:py-28 px-4 sm:px-8 md:px-14 max-w-7xl mx-auto relative overflow-hidden" id="testimonials">
+    
+    <!-- Ambient Background Watermark -->
+    <div class="bg-watermark-text text-[15vw] top-8 left-4 opacity-20 select-none">LOVE NOTES</div>
+
+    <!-- Floating Celestial Sparkles in Testimonials -->
+    <div class="celestial-cluster top-6 right-20 hidden sm:flex">
+      <span class="celestial-star star-twinkle-1 text-gold-500 text-base">✦</span>
+      <span class="celestial-star star-twinkle-3 text-gold-400 text-xs">✧</span>
+    </div>
+
+    <div class="flex items-center justify-between mb-10 sm:mb-16 relative z-10">
+      <div>
+        <h2 class="font-serif text-2.5xl sm:text-3xl md:text-5xl text-charcoal-900 uppercase font-semibold">
+          LOVE NOTES FROM<br/>OUR COUPLES
+        </h2>
+      </div>
+      <div class="inline-flex items-center gap-2 text-gold-600 font-sans text-xs font-semibold uppercase tracking-[0.3em]">
+        <span class="text-gold-500 text-xs">✦</span>
+        <span>TESTIMONIALS</span>
+        <span class="text-gold-500 text-xs">✦</span>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+      <!-- Left Note Card -->
+      <div class="lg:col-span-6 relative">
+        <div class="bg-[#D8CCBA] p-5 sm:p-10 rounded-xs relative sm:-rotate-1 shadow-lg border border-gold-500/20">
+          
+          <!-- 5 Gold Stars Rating Constellation -->
+          <div class="flex items-center justify-between mb-4 sm:mb-6 px-1">
+            <div class="star-constellation-rating">
+              <span class="text-gold-600 text-sm">✦</span>
+              <span class="text-gold-600 text-sm">✦</span>
+              <span class="text-gold-600 text-sm">✦</span>
+              <span class="text-gold-600 text-sm">✦</span>
+              <span class="text-gold-600 text-sm">✦</span>
+              <span class="font-sans text-[9px] uppercase tracking-widest text-charcoal-800 font-bold ml-1.5">5.0 RATED</span>
+            </div>
+            <span class="text-gold-600 text-xs font-serif font-bold">VOGUE FEATURED</span>
+          </div>
+
+          <p id="leftNoteQuote" class="font-editorial text-lg sm:text-2xl text-charcoal-900 leading-relaxed italic">
+            “Aiden Vance Visuals didn't just photograph our wedding — they photographed how it felt. We cried looking at the gallery.”
+          </p>
+          <div class="mt-4 sm:mt-6 flex items-center justify-between border-t border-neutral-400/40 pt-3 sm:pt-4">
+            <div>
+              <p id="leftNoteAuthor" class="font-sans text-xs tracking-widest font-semibold uppercase text-charcoal-800">CLARA &amp; LIAM</p>
+              <p id="leftNoteLocation" class="text-[10px] text-neutral-600 uppercase tracking-widest flex items-center gap-1">
+                <span>Tuscany, Italy</span> <span class="text-gold-600">✦</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="absolute -bottom-5 -right-2 sm:-bottom-8 sm:-right-8 w-24 sm:w-36 polaroid-box p-1 sm:p-1.5 pb-3 sm:pb-4 rotate-6 z-20 relative" data-lightbox="true" data-title="Clara & Liam" data-meta="Tuscany Wedding">
+            <span class="card-star-corner top-1 right-1 text-gold-500 text-[9px]">✦</span>
+            <img id="leftNoteImg" alt="Happy couple portrait" class="w-full aspect-square object-cover" src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Note Card -->
+      <div class="lg:col-span-6 relative flex flex-col items-center lg:items-end mt-4 lg:mt-0">
+        <div class="relative w-full max-w-md polaroid-box p-3 sm:p-4 pb-5 sm:pb-6 rotate-1">
+          <span class="card-star-corner top-2 right-2 text-gold-500 text-xs">✦</span>
+          <div class="p-3 sm:p-4 bg-[#F5ECE0] rounded-xs mb-3 sm:mb-4 border border-gold-500/20">
+            <div class="star-constellation-rating mb-2">
+              <span class="text-gold-600 text-xs">✦</span>
+              <span class="text-gold-600 text-xs">✦</span>
+              <span class="text-gold-600 text-xs">✦</span>
+              <span class="text-gold-600 text-xs">✦</span>
+              <span class="text-gold-600 text-xs">✦</span>
+            </div>
+            <p id="rightNoteQuote" class="font-editorial text-base sm:text-xl text-charcoal-800 italic leading-snug">
+              “Every frame felt like it was waiting to happen. Somehow Aiden was always exactly where the moment was.”
+            </p>
+            <p id="rightNoteAuthor" class="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest font-semibold text-neutral-600 mt-2 sm:mt-3 flex items-center gap-1">
+              <span>— EMMA &amp; JULIAN</span> <span class="text-gold-600">✧</span>
+            </p>
+          </div>
+          <div class="aspect-[16/10] overflow-hidden rounded-xs" data-lightbox="true" data-title="Emma & Julian" data-meta="Lake Como">
+            <img id="rightNoteImg" alt="Couple under ceremony tree" class="w-full h-full object-cover" src="assets/images/couple-romantic.jpg"/>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4 mt-6">
+          <button id="prevBtn" aria-label="Previous testimonial" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-neutral-400 flex items-center justify-center text-charcoal-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer">
+            ←
+          </button>
+          <button id="nextBtn" aria-label="Next testimonial" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-neutral-400 flex items-center justify-center text-charcoal-800 hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-colors cursor-pointer">
+            →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (SHORT, COMPACT & LUXURY EDITORIAL)
+       ========================================================================== -->
+  <footer class="py-6 sm:py-8 px-4 sm:px-8 md:px-14 border-t border-neutral-300/60 bg-cream-200/70 relative z-20" id="inquire">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+      
+      <!-- Brand & Socials -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+        <a href="#home" class="flex items-center gap-2.5 group">
+          <div class="w-7 h-7 rounded-full border border-gold-500 flex items-center justify-center p-1 relative shadow-xs bg-cream-100">
+            <svg class="w-3.5 h-3.5 text-gold-600 stroke-current fill-none stroke-[1.6]" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path>
+            </svg>
+          </div>
+          <span class="font-serif text-sm font-bold tracking-widest uppercase text-charcoal-900">AIDEN VANCE VISUAL</span>
+        </a>
+
+        <div class="flex items-center gap-2.5">
+          <a aria-label="Facebook" class="w-7 h-7 rounded-full border border-neutral-400/50 flex items-center justify-center text-charcoal-800 hover:border-gold-600 hover:text-gold-600 transition-colors bg-cream-100" href="#">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path></svg>
+          </a>
+          <a aria-label="X" class="w-7 h-7 rounded-full border border-neutral-400/50 flex items-center justify-center text-charcoal-800 hover:border-gold-600 hover:text-gold-600 transition-colors bg-cream-100" href="#">
+            <svg class="w-3 h-3 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+          </a>
+          <a aria-label="Instagram" class="w-7 h-7 rounded-full border border-neutral-400/50 flex items-center justify-center text-charcoal-800 hover:border-gold-600 hover:text-gold-600 transition-colors bg-cream-100" href="#">
+            <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Nav Links -->
+      <nav class="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-sans text-[11px] tracking-[0.16em] uppercase text-charcoal-800 font-semibold">
+        <a class="hover:text-gold-600 transition-colors" href="#home">Home</a>
+        <span class="text-gold-500 text-[8px]">✦</span>
+        <a class="hover:text-gold-600 transition-colors" href="#about">About</a>
+        <span class="text-gold-500 text-[8px]">✦</span>
+        <a class="hover:text-gold-600 transition-colors" href="#services">Services</a>
+        <span class="text-gold-500 text-[8px]">✦</span>
+        <a class="hover:text-gold-600 transition-colors" href="#gallery">Gallery</a>
+        <span class="text-gold-500 text-[8px]">✦</span>
+        <a class="hover:text-gold-600 transition-colors" href="#testimonials">Love Notes</a>
+      </nav>
+
+      <!-- Copyright & Tagline -->
+      <div class="text-[10px] text-neutral-500 font-sans tracking-wider flex flex-col sm:flex-row items-center gap-1 sm:gap-3">
+        <p>© 2026 AIDEN VANCE VISUAL.</p>
+        <p class="text-gold-600 hidden sm:inline">✦</p>
+        <p>ALL RIGHTS RESERVED.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal -->
+  <div class="modal-overlay" id="lightboxModal">
+    <div class="relative max-w-3xl w-full flex flex-col items-center">
+      <button class="absolute -top-12 right-0 text-white text-3xl font-light hover:text-gold-400 transition-colors cursor-pointer p-2" id="closeLightboxModal" aria-label="Close Lightbox">✕</button>
+      <div class="max-h-[80vh] rounded-lg overflow-hidden shadow-2xl bg-black">
+        <img id="lightboxImg" class="max-h-[75vh] w-auto object-contain" src="" alt="Zoomed photography"/>
+      </div>
+      <div class="text-center mt-4 text-white">
+        <h3 id="lightboxTitle" class="font-serif text-2xl tracking-wide"></h3>
+        <p id="lightboxSubtitle" class="font-sans text-xs tracking-widest text-gold-400 uppercase mt-1"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Reel Modal -->
+  <div class="modal-overlay" id="reelModal">
+    <div class="relative max-w-4xl w-full bg-neutral-950 rounded-2xl overflow-hidden shadow-2xl border border-gold-500/30">
+      <button class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-gold-600 transition-colors" id="closeReelModal" aria-label="Close video">✕</button>
+      <div class="relative w-full pt-[56.25%] bg-black">
+        <iframe id="reelVideoIframe" class="absolute inset-0 w-full h-full border-0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Lightbox
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxSubtitle = document.getElementById('lightboxSubtitle');
+      const closeLightboxBtn = document.getElementById('closeLightboxModal');
+
+      document.querySelectorAll('[data-lightbox="true"]').forEach(card => {
+        card.addEventListener('click', () => {
+          const img = card.querySelector('img');
+          if (!img) return;
+          lightboxImg.src = img.src;
+          lightboxTitle.textContent = card.dataset.title || 'Fine Art Photography';
+          lightboxSubtitle.textContent = card.dataset.meta || 'Aiden Vance Visual';
+          lightboxModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+
+      // Video Reel Modal
+      const reelModal = document.getElementById('reelModal');
+      const closeReelBtn = document.getElementById('closeReelModal');
+      const reelIframe = document.getElementById('reelVideoIframe');
+
+      document.querySelectorAll('.openReelBtn, #openReelBtn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          reelIframe.src = "https://www.youtube-nocookie.com/embed/9No-FiEInLA?autoplay=1&controls=1&rel=0&modestbranding=1";
+          reelModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeReel() {
+        reelModal.classList.remove('active');
+        reelIframe.src = '';
+        document.body.style.overflow = '';
+      }
+      if (closeReelBtn) closeReelBtn.addEventListener('click', closeReel);
+      reelModal.addEventListener('click', (e) => {
+        if (e.target === reelModal) closeReel();
+      });
+
+      // Testimonial Carousel
+      const reviews = [
+        {
+          leftQuote: "“Aiden Vance Visuals didn't just photograph our wedding — they photographed how it felt. We cried looking at the gallery.”",
+          leftAuthor: "CLARA & LIAM",
+          leftLoc: "Tuscany, Italy",
+          leftImg: "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=400&q=80",
+          rightQuote: "“Every frame felt like it was waiting to happen. Somehow Aiden was always exactly where the moment was.”",
+          rightAuthor: "— EMMA & JULIAN",
+          rightImg: "assets/images/couple-romantic.jpg"
+        },
+        {
+          leftQuote: "“The 35mm film captures gave our memories a golden, poetic timelessness that looks like a vintage Italian film.”",
+          leftAuthor: "SARA & DANIEL",
+          leftLoc: "Lake Como, Italy",
+          leftImg: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=400&q=80",
+          rightQuote: "“Unobtrusive, deeply artistic, and profoundly moving. We couldn't have asked for a better storyteller.”",
+          rightAuthor: "— PRIYA & ROHAN",
+          rightImg: "https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=500&q=80"
+        }
+      ];
+
+      let currentRev = 0;
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      function updateReview(idx) {
+        const r = reviews[idx];
+        document.getElementById('leftNoteQuote').textContent = r.leftQuote;
+        document.getElementById('leftNoteAuthor').textContent = r.leftAuthor;
+        document.getElementById('leftNoteLocation').textContent = r.leftLoc;
+        document.getElementById('leftNoteImg').src = r.leftImg;
+        document.getElementById('rightNoteQuote').textContent = r.rightQuote;
+        document.getElementById('rightNoteAuthor').textContent = r.rightAuthor;
+        document.getElementById('rightNoteImg').src = r.rightImg;
+      }
+
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          currentRev = (currentRev - 1 + reviews.length) % reviews.length;
+          updateReview(currentRev);
+        });
+        nextBtn.addEventListener('click', () => {
+          currentRev = (currentRev + 1) % reviews.length;
+          updateReview(currentRev);
+        });
+      }
+
+      // ==========================================================================
+      // SERVICES CAROUSEL CONTROLS (SMOOTH HORIZONTAL SWIPE & SCROLL)
+      // ==========================================================================
+      const servicesContainer = document.getElementById('servicesContainer') || document.getElementById('servicesTrack');
+      const servicePrevBtn = document.getElementById('servicePrevBtn');
+      const serviceNextBtn = document.getElementById('serviceNextBtn');
+
+      if (servicesContainer) {
+        if (servicePrevBtn) {
+          servicePrevBtn.addEventListener('click', () => {
+            servicesContainer.scrollBy({ left: -240, behavior: 'smooth' });
+          });
+        }
+        if (serviceNextBtn) {
+          serviceNextBtn.addEventListener('click', () => {
+            servicesContainer.scrollBy({ left: 240, behavior: 'smooth' });
+          });
+        }
+
+        // Drag to scroll
+        let isDownServices = false;
+        let startXServices;
+        let scrollLeftServices;
+
+        servicesContainer.addEventListener('mousedown', (e) => {
+          isDownServices = true;
+          startXServices = e.pageX - servicesContainer.offsetLeft;
+          scrollLeftServices = servicesContainer.scrollLeft;
+        });
+        servicesContainer.addEventListener('mouseleave', () => {
+          isDownServices = false;
+        });
+        servicesContainer.addEventListener('mouseup', () => {
+          isDownServices = false;
+        });
+        servicesContainer.addEventListener('mousemove', (e) => {
+          if (!isDownServices) return;
+          e.preventDefault();
+          const x = e.pageX - servicesContainer.offsetLeft;
+          const walk = (x - startXServices) * 1.5;
+          servicesContainer.scrollLeft = scrollLeftServices - walk;
+        });
+      }
+
+      // ==========================================================================
+      // 35MM FILM ROLL GALLERY CONTROLS & DRAG LOGIC
+      // ==========================================================================
+      const filmTrack = document.getElementById('filmTrack');
+      const filmPrevBtn = document.getElementById('filmPrevBtn');
+      const filmNextBtn = document.getElementById('filmNextBtn');
+      const filterBtns = document.querySelectorAll('.film-filter-btn');
+
+      if (filmTrack) {
+        // Next / Prev buttons
+        if (filmPrevBtn) {
+          filmPrevBtn.addEventListener('click', () => {
+            filmTrack.scrollBy({ left: -360, behavior: 'smooth' });
+          });
+        }
+        if (filmNextBtn) {
+          filmNextBtn.addEventListener('click', () => {
+            filmTrack.scrollBy({ left: 360, behavior: 'smooth' });
+          });
+        }
+
+        // Drag to scroll
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        filmTrack.addEventListener('mousedown', (e) => {
+          isDown = true;
+          startX = e.pageX - filmTrack.offsetLeft;
+          scrollLeft = filmTrack.scrollLeft;
+        });
+        filmTrack.addEventListener('mouseleave', () => {
+          isDown = false;
+        });
+        filmTrack.addEventListener('mouseup', () => {
+          isDown = false;
+        });
+        filmTrack.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - filmTrack.offsetLeft;
+          const walk = (x - startX) * 1.8;
+          filmTrack.scrollLeft = scrollLeft - walk;
+        });
+
+        // Film Stock Filters
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterVal = btn.dataset.filter;
+            const frames = filmTrack.querySelectorAll('.film-frame-item');
+
+            frames.forEach(frame => {
+              if (filterVal === 'all' || frame.dataset.category === filterVal) {
+                frame.style.display = 'block';
+                frame.style.opacity = '1';
+              } else {
+                frame.style.display = 'none';
+                frame.style.opacity = '0';
+              }
+            });
+          });
+        });
+      }
+
+      // Mobile Nav Drawer
+      const openNavBtn = document.getElementById('openNavBtn');
+      const closeNavBtn = document.getElementById('closeNavBtn');
+      const mobileNavModal = document.getElementById('mobileNavModal');
+
+      if (openNavBtn && mobileNavModal) {
+        openNavBtn.addEventListener('click', () => {
+          mobileNavModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        closeNavBtn.addEventListener('click', () => {
+          mobileNavModal.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        document.querySelectorAll('.nav-link-click').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNavModal.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+
+      // Ambient Gold Spotlight Cursor Halo (Desktop)
+      const cursorGlow = document.getElementById('ambientCursorGlow');
+      if (cursorGlow && window.innerWidth >= 1024) {
+        let mouseX = window.innerWidth / 2;
+        let mouseY = window.innerHeight / 2;
+        let curX = mouseX;
+        let curY = mouseY;
+
+        window.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+        });
+
+        function animateCursorGlow() {
+          curX += (mouseX - curX) * 0.08;
+          curY += (mouseY - curY) * 0.08;
+          cursorGlow.style.left = `${curX}px`;
+          cursorGlow.style.top = `${curY}px`;
+          requestAnimationFrame(animateCursorGlow);
+        }
+        animateCursorGlow();
+      }
+
+      // Escape key handler
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeLightbox();
+          closeReel();
+          if (mobileNavModal) {
+            mobileNavModal.classList.remove('active');
+            document.body.style.overflow = '';
+          }
+        }
+      });
+    });
+  </script>
+</body>
+</html>
